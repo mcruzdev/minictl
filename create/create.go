@@ -2,6 +2,7 @@ package create
 
 import (
 	"fmt"
+
 	"github.com/spf13/cobra"
 )
 
@@ -15,5 +16,6 @@ func NewCreateCommand() *cobra.Command {
 	}
 
 	createCmd.AddCommand(NewCreateApplicationCommand())
+	createCmd.AddCommand(NewCreateVersionCommand())
 	return createCmd
 }
