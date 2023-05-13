@@ -1,6 +1,7 @@
 package create
 
 import (
+	"com.github.mcruzdev.miniplatform.minictl/internal/github/repo"
 	"fmt"
 	"github.com/spf13/cobra"
 	"log"
@@ -13,6 +14,8 @@ func NewCreateApplicationCommand() *cobra.Command {
 		Use: "application",
 		Run: func(cmd *cobra.Command, args []string) {
 			log.Println(fmt.Sprintf("Creating application with name '%s'", applicationName))
+			newRepo := repo.NewRepo()
+			newRepo.Create(applicationName)
 		},
 	}
 
