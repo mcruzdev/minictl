@@ -1,10 +1,11 @@
 package create
 
 import (
-	"com.github.mcruzdev.miniplatform.minictl/internal/github/repo"
 	"fmt"
-	"github.com/spf13/cobra"
 	"log"
+
+	"com.github.mcruzdev.miniplatform.minictl/pkg/github/repo"
+	"github.com/spf13/cobra"
 )
 
 var applicationName string
